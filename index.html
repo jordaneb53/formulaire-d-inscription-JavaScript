@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+    <title>Examen JavaScript</title>
+</head>
+
+<body>
+
+    <main>
+        <header class="header">
+            <div class="logo">
+                <img src="image/logo_mns.png" alt="logo de l'entreprise MNS">
+            </div>
+            <div class="users">
+                <div class="icons">
+                    <button id="displayModal"><i class="ri-login-circle-line"></i>Inscription</button>
+                </div>
+            </div>
+        </header>
+
+        <i class="ri-menu-line" id="iconBurger"></i>
+        <div class="burgerMenu">
+            <div class="fermerBurger">
+                <i class="ri-close-line"></i>
+            </div>
+            <nav class="navBurger">
+                <ul>
+                    <li><a href="formulaire.html">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1>Examen JavaScript </h1>
+        <div class="background">
+            <img src="image/fusse_mns.jpg"
+                alt="image de fond réprésentant une fusser dans l'espace avec le logo MNS sur le fond">
+        </div>
+        <div id="modal">
+            <div class="form-container">
+                <button id="closeModal"><i class="ri-close-large-line"></i></button>
+                <h2>Formulaire d'Inscription</h2>
+                <form method="post" id="form">
+                    <div class="form-group ">
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom:</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email<span class="required">*</span>:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span style="color: black ;">Ex: dupont@ex.com</span>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone <span class="required">*</span>:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+33XXXXXXXXX" required
+                            pattern="^\+33\d{9}$">
+                        <span style="color: black ;">Ex: +33 6 25 24 23 66</span>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="pseudo">Pseudo<span class="required">*</span>:</label>
+                        <input type="text" id="pseudo" name="pseudo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mot_de_passe">Mot de passe<span class="required">*</span>:</label>
+                        <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+                        <!-- <span class="toggle-password" onclick="togglePassword()">👁</span> -->
+
+                        <div id="passwordModal" class="modal">
+                            <div class="modal-content">
+                                <span id="closeModal1" class="close-btn">&times;</span>
+                                <h2>Critères du mot de passe</h2>
+                                <ul>
+                                    <li id="length"> - 8 caractères</li>
+                                    <li id="uppercase">- 1 lettre majuscule</li>
+                                    <li id="lowercase">- 1 lettre minuscule</li>
+                                    <li id="number">- 1 chiffre</li>
+                                    <li id="special">- 1 caractère spécial (ex: #, ?, @, etc.)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <span id="passwordHelp" class="question-mark">?</span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="mot_de_passe">Confirmer le mot de passe<span class="required">*</span>:</label>
+                        <input type="password" id="confirme_mot_de_passe" name="mot_de_passe" required>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="accepter_conditions" name="accepter_conditions" required>
+                        <label for="accepter_conditions">J'accepte les conditions<span class="required">*</span></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="btn" value="S'inscrire">
+                    </div>
+                </form>
+            </div>
+
+            <a href="#" id="backModal">Retour</a>
+
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 BRAUN Jordane. Tous droits reservés.</p>
+        <a href="https://www.linkedin.com/in/jordane-braun/"><i class="ri-linkedin-line"></i></a>
+        <a href="https://github.com/jordaneb53"><i class="ri-github-line"></i></a>
+    </footer>
+
+</body>
+
+</html>

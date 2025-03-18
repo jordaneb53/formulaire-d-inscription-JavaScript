@@ -1,0 +1,411 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    margin: 50px;
+    background-color: #192754;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    z-index: -1;
+}
+
+#iconBurger {
+    font-size: 2rem;
+    color: #fff;
+    float: right;
+    position: relative;
+    top: -70px;
+    right: 27px;
+    border: 1px solid #FF6D06;
+    border-radius: 50%;
+    padding: 15px;
+    display: none;
+}
+
+#iconBurger:hover {
+    background: #FF6D06;
+    color: #fff;
+    cursor: pointer;
+}
+
+.burgerMenu {
+    background: #292929d6;
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+.burgerMenu.active {
+    background: #292929ea;
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+.fermerBurger {
+    position: absolute;
+    font-size: 4rem;
+    color: red;
+    margin-top: -23px;
+    cursor: pointer;
+    right: 0px;
+}
+
+.fermerBurger li {
+    margin-top: 0 auto;
+    list-style-type: none;
+}
+
+#label {
+    color: #fff;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+#modal>div {
+    width: 750px;
+    background-color: white;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#backModal {
+    position: absolute;
+    left: -100px;
+}
+
+#displayModal {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.4rem;
+    gap: 20px;
+    color: #FF6D06;
+}
+
+#displayModal:hover {
+    color: #fff;
+
+}
+
+#closeModal {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.3rem;
+    gap: 20px;
+    color: red;
+    margin-left: 285px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    color: #FF6D06;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+input:focus {
+    outline: none;
+    border-color: #b5b4b4;
+    background-color: #ccc;
+}
+
+.required {
+    color: red;
+}
+
+.error {
+    color: red
+}
+
+.error input,
+.error textarea {
+    border-color: red;
+    box-shadow: 2px 2px 2px red;
+}
+
+.error label {
+    color: black;
+}
+
+.users {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+    gap: 20px;
+}
+
+.users a {
+    text-decoration: none;
+    color: #FF6D06;
+    font-size: 1.3rem;
+}
+
+.users a:hover {
+    color: #fff;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a i {
+    color: #FF6D06;
+    font-size: 2.3rem;
+}
+
+footer a i:hover {
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    /* La modale est cachée par défaut */
+    position: fixed;
+    z-index: 1;
+    /* Assurer que la modale est au-dessus de tout */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.close-btn {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.show-modal {
+    display: block !important;
+}
+
+
+.question-mark {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: #FF6D06;
+    color: white;
+}
+
+/* Tooltip */
+.question-mark::after {
+    content: "Info sur le mot de passe";
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    background-color: #FF6D06;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.question-mark:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Liste des critères */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+/* .toggle-password {
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+} */
+
+
+
+@media screen and (max-width: 768px) {
+
+    button {
+        display: none;
+    }
+
+    #iconBurger {
+        font-size: 2rem;
+        color: #fff;
+        float: right;
+        position: relative;
+        top: -70px;
+        right: -12px;
+        border: 1px solid #FF6D06;
+        border-radius: 50%;
+        padding: 15px;
+        display: block;
+    }
+
+    #modal>div {
+        width: 90%;
+    }
+
+    .navBurger ul li {
+        font-size: 1.5rem;
+        list-style-type: none;
+        text-align: center;
+        margin-top: 150px;
+        color: #FF6D06;
+        cursor: pointer;
+    }
+
+    .navBurger ul li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        list-style-type: none;
+        text-align: center;
+        margin-top: 150px;
+        color: #FF6D06;
+        cursor: pointer;
+    }
+
+    .navBurger ul li a:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .navBurger ul li:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #displayModal {
+        font-size: 1.2rem;
+    }
+
+    #closeModal {
+        font-size: 1.2rem;
+    }
+
+    .users {
+        font-size: 1rem;
+    }
+
+    .background img {
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/formulaire.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="image/logo_mns.png" alt="logo de l'entreprise MNS">
+        </div>
+        <div class="users">
+            <a href="index.html"><i class="ri-home-2-line"></i>Accueil</a>
+        </div>
+    </header>
+    <main>
+        
+        <div class="form-container" >
+            <h2>Formulaire d'Inscription</h2>
+            <form method="post" id="form">
+                <div class="form-group " id="label" >
+                    <label for="nom">Nom<span class="required">*</span>:</label>
+                    <input type="text" id="nom" name="nom"required>
+                </div>
+                <div class="form-group" id="label">
+                    <label for="prenom">Prénom<span class="required">*</span>:</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group" id="label">
+                    <label for="email">Email<span class="required">*</span>:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group" id="label">
+                    <label for="mot_de_passe">Mot de passe<span class="required">*</span>:</label>
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" required autocomplete="new-password">
+                    <div id="password-requirements">
+                        <p>Le mot de passe doit contenir :</p>
+                        <ul>
+                            <li id="length" style="color:red;">❌ Au moins 8 caractères</li>
+                            <li id="uppercase" style="color:red;">❌ Une lettre majuscule</li>
+                            <li id="lowercase" style="color:red;">❌ Une lettre minuscule</li>
+                            <li id="number" style="color:red;">❌ Un chiffre</li>
+                            <li id="special" style="color:red;">❌ Un caractère spécial (#?!@$%^&*-)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group" id="label">
+                    <label for="confirme_mot_de_passe">Confirmer le mot de passe<span class="required">*</span>:</label>
+                    <input type="password" id="confirme_mot_de_passe" name="confirme_mot_de_passe" required autocomplete="new-password">
+
+                </div >
+                    <input type="checkbox" id="accepter_conditions" name="accepter_conditions" required>
+                    <label for="accepter_conditions" style="color: #fff;">J'accepte les conditions<span class="required">*</span></label>
+                <div class="form-group">
+                    <input type="submit" id="btn" value="S'inscrire">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
